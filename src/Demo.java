@@ -1,15 +1,41 @@
 public class Demo {
     public static void main(String[] args) {
-        int nums[] = {1,2,3,5, 7, 9,10, 11, 13};
-        int target = 1;
+//        linearSearch and binarySearch part
+//        int nums[] = {1,2,3,5, 7, 9,10, 11, 13};
+//        int target = 1;
+//
+//        int result1 = linearSearch(nums, target);
+//        int result2 = binarySearch(nums, target);
+//        int result3 = binarySearchRecursive(nums, target,0,nums.length-1,0);
+//        if (result1 != -1) {
+//            System.out.println("Element found at : " + result1);
+//        } else {
+//            System.out.println("Element Not Found");
+//        }
 
-        int result1 = linearSearch(nums, target);
-        int result2 = binarySearch(nums, target);
-        int result3 = binarySearchRecursive(nums, target,0,nums.length-1,0);
-        if (result1 != -1) {
-            System.out.println("Element found at : " + result1);
-        } else {
-            System.out.println("Element Not Found");
+//        sorting test part
+        int nums[] = {6, 5, 2, 8, 9, 4};
+        int size = nums.length;
+        int temp;
+
+        System.out.println("before sorting");
+        for (int num : nums) {
+            System.out.println(num + " ");
+        }
+
+        for (int i = 0; i < size; i++) {
+            for (int j = 0; j < size - 1; j++) {
+                if (nums[j] > nums[j + 1]) {
+                    temp = nums[j];
+                    nums[j] = nums[j + 1];
+                    nums[j + 1] = temp;
+                }
+            }
+        }
+
+        System.out.println("after sorting");
+        for (int num : nums) {
+            System.out.println(num + " ");
         }
 
     }
