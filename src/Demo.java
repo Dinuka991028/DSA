@@ -13,30 +13,67 @@ public class Demo {
 //            System.out.println("Element Not Found");
 //        }
 
-//        sorting test part
+//      bubble sorting test part
+//        int nums[] = {6, 5, 2, 8, 9, 4};
+//        int size = nums.length;
+//        int temp;
+//
+//        System.out.println("before sorting");
+//        for (int num : nums) {
+//            System.out.println(num + " ");
+//        }
+//
+//        for (int i = 0; i < size; i++) {
+//            for (int j = 0; j < size - 1; j++) {
+//                if (nums[j] > nums[j + 1]) {
+//                    temp = nums[j];
+//                    nums[j] = nums[j + 1];
+//                    nums[j + 1] = temp;
+//                }
+//            }
+//        }
+//
+//        System.out.println("after sorting");
+//        for (int num : nums) {
+//            System.out.println(num + " ");
+//        }
+
+        //      selectin sorting test part
         int nums[] = {6, 5, 2, 8, 9, 4};
         int size = nums.length;
         int temp;
+        int minIndex;
 
         System.out.println("before sorting");
         for (int num : nums) {
-            System.out.println(num + " ");
+            System.out.print(num + " ");
         }
+        System.out.println();
+        System.out.println("---------------------------");
 
-        for (int i = 0; i < size; i++) {
-            for (int j = 0; j < size - 1; j++) {
-                if (nums[j] > nums[j + 1]) {
-                    temp = nums[j];
-                    nums[j] = nums[j + 1];
-                    nums[j + 1] = temp;
+        for (int i = 0; i < size - 1; i++) {
+            minIndex = i;
+            for (int j = i + 1; j < size; j++) {
+                if (nums[minIndex] > nums[j]) {
+                    minIndex = j;
                 }
             }
-        }
 
+            temp = nums[minIndex];
+            nums[minIndex] = nums[i];
+            nums[i] = temp;
+
+            for (int num : nums) {
+                System.out.print(num + " ");
+            }
+            System.out.println();
+        }
+        System.out.println("---------------------------");
         System.out.println("after sorting");
         for (int num : nums) {
-            System.out.println(num + " ");
+            System.out.print(num + " ");
         }
+
 
     }
 
