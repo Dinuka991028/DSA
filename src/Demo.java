@@ -38,42 +38,57 @@ public class Demo {
 //            System.out.println(num + " ");
 //        }
 
-        //      selectin sorting test part
-        int nums[] = {6, 5, 2, 8, 9, 4};
-        int size = nums.length;
-        int temp;
-        int minIndex;
+//              selectin sorting test part
+//        int nums[] = {6, 5, 2, 8, 9, 4};
+//        int size = nums.length;
+//        int temp;
+//        int minIndex;
+//
+//        System.out.println("before sorting");
+//        for (int num : nums) {
+//            System.out.print(num + " ");
+//        }
+//        System.out.println();
+//        System.out.println("---------------------------");
+//
+//        for (int i = 0; i < size - 1; i++) {
+//            minIndex = i;
+//            for (int j = i + 1; j < size; j++) {
+//                if (nums[minIndex] > nums[j]) {
+//                    minIndex = j;
+//                }
+//            }
+//
+//            temp = nums[minIndex];
+//            nums[minIndex] = nums[i];
+//            nums[i] = temp;
+//
+//            for (int num : nums) {
+//                System.out.print(num + " ");
+//            }
+//            System.out.println();
+//        }
+//        System.out.println("---------------------------");
+//        System.out.println("after sorting");
+//        for (int num : nums) {
+//            System.out.print(num + " ");
+//        }
 
-        System.out.println("before sorting");
-        for (int num : nums) {
+//        insertion sort
+        int arr[] = {5, 6, 2, 3, 1, 8, 4};
+        for (int i = 1; i < arr.length; i++) {
+            int key = arr[i];
+            int j = i - 1;
+            while (j >= 0 && arr[j] > key) {
+                arr[j + 1] = arr[j];
+                j--;
+            }
+            arr[j + 1] = key;
+        }
+
+        for (int num : arr) {
             System.out.print(num + " ");
         }
-        System.out.println();
-        System.out.println("---------------------------");
-
-        for (int i = 0; i < size - 1; i++) {
-            minIndex = i;
-            for (int j = i + 1; j < size; j++) {
-                if (nums[minIndex] > nums[j]) {
-                    minIndex = j;
-                }
-            }
-
-            temp = nums[minIndex];
-            nums[minIndex] = nums[i];
-            nums[i] = temp;
-
-            for (int num : nums) {
-                System.out.print(num + " ");
-            }
-            System.out.println();
-        }
-        System.out.println("---------------------------");
-        System.out.println("after sorting");
-        for (int num : nums) {
-            System.out.print(num + " ");
-        }
-
 
     }
 
